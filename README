@@ -1,0 +1,46 @@
+Gheoace Mihai
+Tema 3
+
+Proiectul cuprinde 4 pachete; developer, entities, main si observers.
+Vom descrie pe rand structura fiecarui pachet si scopul sau.
+
+	developer
+	- cuprinde clasele Tester si UrgencyEstimator
+	Tester
+	- cuprinde functii de printare informatii, printare examinare, printare tratament, printarea check ului doctorilor si altele.
+	Urgency Estimator
+	- estimeaza urgenta pentru o boala si severitate data
+
+	entities
+	Cuprinde pachetele doctors, enums, patients si clasa Nurse.
+		doctors
+		Doctor - Contine interfata doctorilor cu minim de functii declarate
+		AbstractDoctor - contine campurile doctorilor + getter + setter.
+		BaseDoctor - implementeaza unele functionalitati necesare doctorilor.
+		Cardiologist, ErPhysician, Gastroenterologist, GeneralSurgeon, Internist, Neurologist - fiecare implementeaza un tip de doctor.
+
+		enums
+		- Contine numai enums.
+		DoctorFancyName - numele doctorilor folosite in check - ul doctorilor.
+		DoctorSpecialisation - specializarile doctorilor.
+		IllnessType - tipurile bolilor.
+		InvestigationResult - rezultatele investigatiilor.
+		State - starea pacientilor.
+		Urgency - urgenta pacientilor.
+
+		patients
+		Patient - clasa care defineste patientul.
+		TriageComparator - comparator pentru triaj.
+		PatientComparator - comparator pentru toate celelalte sortari.
+
+		Clasa Nurse implementeaza logica asistentei.
+
+	main
+	Cuprinde lumea - clasa ER (Observable) si MainRedistributable - pentru citirea fisierului Json.
+
+	observers
+	Cuprinde clasele Examination, Investigation, Treatment, Triage
+	care implementeaza exact etapa definita prin numele lor si sunt toti observeri ai ER(Emergency Room).
+
+	Clasa Main constituie entry point ul programului.
+
